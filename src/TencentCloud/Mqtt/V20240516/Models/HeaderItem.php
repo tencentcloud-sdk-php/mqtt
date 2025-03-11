@@ -18,28 +18,28 @@ namespace TencentCloud\Mqtt\V20240516\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 标签数据
+ * HTTP 认证器header
  *
- * @method string getTagKey() 获取标签名称
- * @method void setTagKey(string $TagKey) 设置标签名称
- * @method string getTagValue() 获取标签值
- * @method void setTagValue(string $TagValue) 设置标签值
+ * @method string getKey() 获取header key
+ * @method void setKey(string $Key) 设置header key
+ * @method string getValue() 获取header value
+ * @method void setValue(string $Value) 设置header value
  */
-class Tag extends AbstractModel
+class HeaderItem extends AbstractModel
 {
     /**
-     * @var string 标签名称
+     * @var string header key
      */
-    public $TagKey;
+    public $Key;
 
     /**
-     * @var string 标签值
+     * @var string header value
      */
-    public $TagValue;
+    public $Value;
 
     /**
-     * @param string $TagKey 标签名称
-     * @param string $TagValue 标签值
+     * @param string $Key header key
+     * @param string $Value header value
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class Tag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
-            $this->TagKey = $param["TagKey"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
         }
 
-        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
-            $this->TagValue = $param["TagValue"];
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }
